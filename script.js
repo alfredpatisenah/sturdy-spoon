@@ -24,7 +24,7 @@ document.getElementById('pcr-form').addEventListener('submit', function(event) {
     
     const amplificationMixVolumePerReaction = 12.5; // uL
     const probeMixVolumePerReaction = 7.5; // uL
-    const pipettingErrorFactor = 0.2;
+    const pipettingErrorFactor = 0.4;
 
     const totalReactions = reactions + pipettingErrorFactor;
 
