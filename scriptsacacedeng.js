@@ -28,14 +28,17 @@ document.getElementById('pcr-form').addEventListener('submit', function(event) {
     const Pol = 0.625; //uL
     const R = 0.3125; //uL
 
-    const totalReactions = reactions + pipettingErrorFactor;
+    const totalReactions = reactions + 1;
 
-    const amplificationMixVolume = totalReactions * amplificationMixVolumePerReaction;
-    const probeMixVolume = totalReactions * probeMixVolumePerReaction;
-    const totalVolume = amplificationMixVolume + probeMixVolume;
+    const DV_vol = totalReactions * DV
+    const TM_vol = totalReactions * TM
+    const G_vol = totalReactions * G
+    const Pol_vol = totalReactions * Pol
+    const R_vol = totalReactions * R
+    const totalVolume = DV_vol + TM_vol + G_vol + Pol_vol + R_vol;
 
-    const positiveControls = 4;
-    const negativeControls = 1;
+    const positiveControls = 1;
+    const negativeControls = 2;
     const samples = reactions - positiveControls - negativeControls;
 
     document.getElementById('DV_vol').textContent = `${DV_vol.toFixed(4)} uL`;
