@@ -30,11 +30,11 @@ document.getElementById('pcr-form').addEventListener('submit', function(event) {
 
     const totalReactions = reactions + 1;
 
-    const DV_vol = totalReactions * DV
-    const TM_vol = totalReactions * TM
-    const G_vol = totalReactions * G
-    const Pol_vol = totalReactions * Pol
-    const R_vol = totalReactions * R
+    const DV_vol = totalReactions * DV;
+    const TM_vol = totalReactions * TM;
+    const G_vol = totalReactions * G;
+    const Pol_vol = totalReactions * Pol;
+    const R_vol = totalReactions * R;
     const totalVolume = DV_vol + TM_vol + G_vol + Pol_vol + R_vol;
 
     const positiveControls = 1;
