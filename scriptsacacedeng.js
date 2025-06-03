@@ -38,8 +38,11 @@ document.getElementById('pcr-form').addEventListener('submit', function(event) {
     const negativeControls = 1;
     const samples = reactions - positiveControls - negativeControls;
 
-    document.getElementById('amplification-mix').textContent = `${amplificationMixVolume.toFixed(2)} uL`;
-    document.getElementById('probe-mix').textContent = `${probeMixVolume.toFixed(2)} uL`;
-    document.getElementById('total-volume').textContent = `${totalVolume.toFixed(2)} uL`;
+    document.getElementById('DV_vol').textContent = `${DV_vol.toFixed(4)} uL`;
+    document.getElementById('TM_vol').textContent = `${TM_vol.toFixed(4)} uL`;
+    document.getElementById('G_vol').textContent = `${G_vol.toFixed(4)} uL`;
+    document.getElementById('Pol_vol').textContent = `${Pol_vol.toFixed(4)} uL`;
+    document.getElementById('R_vol').textContent = `${R_vol.toFixed(4)} uL`;
+    document.getElementById('total-volume').textContent = `${totalVolume.toFixed(4)} uL`;
     document.getElementById('distribution').textContent = `${positiveControls} positive controls, ${negativeControls} negative controls, ${samples} samples`;
 });
