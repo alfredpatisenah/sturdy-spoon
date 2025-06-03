@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCR Mix Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PCR Mix Calculator</h1>
+        <form id="pcr-form">
+            <label for="reactions">Number of Reactions:</label>
+            <div class="reaction-controls">
+                <button type="button" id="decrease">-</button>
+                <input type="number" id="reactions" name="reactions" min="6" value="6" required>
+                <button type="button" id="increase">+</button>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results">
+            <h2>Results</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>PCR-mix-FRT DV Volume:</td>
+                        <td id="DV_vol"></td>
+                    </tr>
+                    <tr>
+                        <td>RT-PCR-mix-2-TM Volume:</td>
+                        <td id="TM_vol"></td>
+                    </tr>
+                    <tr>
+                        <td>RT-G-mix-2 Volume:</td>
+                        <td id="G_vol"></td>
+                    </tr>
+                    <tr>
+                        <td>TaqF Polymerase Volume:</td>
+                        <td id="Pol_vol"></td>
+                    </tr>
+                    <tr>
+                        <td>MMLV Revertase Volume:</td>
+                        <td id="R_vol"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Volume:</td>
+                        <td id="total-volume"></td>
+                    </tr>
+                    <tr>
+                        <td>Reactions Distribution:</td>
+                        <td id="distribution"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
